@@ -1,0 +1,23 @@
+desc patient_ext_table
+
+select * from patient_ext_table;
+
+select visit_date, zip from oml.patient_visits where patient_id=900;
+
+Select patient_id, name, z.zip, city
+from patient_ext_table, zip_table z
+where patient_ext_table.zip = z.zip
+order by name;
+
+Select p.patient_id, p.name, p.zip, v.visit_date, v.dr_visited, v.report_url
+from oml.patient_visits v , patient_ext_table p 
+where p.patient_id = v.patient_id
+and v.patient_id=900;
+
+select zip, sum(visits)
+from patient_ext_table
+group by zip
+having zip = '11232';
+
+select distinct zip
+from patient_ext_table;
