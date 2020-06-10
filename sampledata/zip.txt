@@ -1,4 +1,0 @@
-"08536"|"West Windsor"
-"08817"|"Edison"
-"11232"|"Sunset Park"
-"90210"|"Malrose Place"
